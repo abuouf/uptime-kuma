@@ -1,1 +1,23 @@
 
+name: Frontend Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: echo "Building..."
+
+      - name: Deploy
+        run: |
+          # Add your deployment steps here
+          # Example: scp or rsync to your Ubuntu 22.04 machine
